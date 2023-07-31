@@ -1,34 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Guitar Repairs ZA
 
-## Getting Started
+### Overview:
 
-First, run the development server:
+This project is a website built with Next.js, Tailwind CSS, and Framer Motion to showcase the services offered by "Guitar Repairs ZA." The goal of this website is to create a professional online presence for the client, attract potential customers, and demonstrate web design skills for the developer's portfolio.
 
-```bash
+### Description:
+
+"Unlock the True Sound of Your Guitar" is a web design project that offers expert guitar repair and setup services. The website aims to provide a captivating user experience, presenting the client's services in a clear and appealing manner. By combining Next.js for server-side rendering, Tailwind CSS for rapid and responsive UI development, and Framer Motion for smooth animations, the website delivers a modern and visually engaging interface.
+
+### Key Features:
+
+- Responsive design to ensure compatibility across various devices and screen sizes.
+- Captivating hero section with a powerful caption that conveys the core message of the business.
+- Services page with detailed information about the two packages: "Basic Restring" and "Full Package."
+- Engaging gallery section showcasing before-and-after images of guitar repairs.
+- Testimonials section to build trust and credibility with potential customers.
+- Contact form and call-to-action buttons to encourage visitors to inquire about services.
+- SEO optimization to enhance the website's discoverability on search engines.
+
+### Installation:
+
+This codebase is intended for the developer's personal use. To run the website locally, ensure you have Node.js and npm installed. Clone the repository, navigate to the project directory, and run the following commands:
+
+```shell
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The website will be accessible at http://localhost:3000/.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Author:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Imraan Hendricks (support@imraanhendricks.com)
 
-## Learn More
+### License:
 
-To learn more about Next.js, take a look at the following resources:
+This project is not open source and is intended for personal use only.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Contact:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+For any inquiries or questions related to this project, feel free to contact the author at the provided email address.

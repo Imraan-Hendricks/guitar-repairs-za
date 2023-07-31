@@ -1,7 +1,40 @@
 {
   "name": "guitar-repairs-za",
-  "version": "0.1.1",
+  "version": "0.1.2",
+  "author": {
+    "name": "Imraan-Hendricks",
+    "email": "support@imraanhendricks.com"
+  },
+  "description": "Unlock the True Sound of Your Guitar: Expert repairs and setups that bring your instrument back to life without breaking the bank, offered by Guitar Repairs ZA.",
   "private": true,
+  "license": "MIT",
+  "homepage": "https://github.com/Imraan-Hendricks/guitar-repairs-za#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Imraan-Hendricks/guitar-repairs-za"
+  },
+  "bugs": {
+    "url": "https://github.com/Imraan-Hendricks/guitar-repairs-za/issues"
+  },
+  "keywords": [
+    "guitar",
+    "repairs",
+    "setup",
+    "restring",
+    "fretboard",
+    "truss rod",
+    "intonation",
+    "electronic checks",
+    "pickup height",
+    "music",
+    "musical instruments",
+    "web design",
+    "portfolio",
+    "responsive",
+    "affordable",
+    "quality",
+    "custom quotes"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
