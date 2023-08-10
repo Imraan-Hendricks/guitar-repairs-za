@@ -1,3 +1,4 @@
+import { Packages } from './Packages';
 import { Hero } from './Hero';
 import { Promo } from './Promo';
 import { Services } from './Services';
@@ -12,6 +13,7 @@ export default function Home() {
       <Promo />
       <Hero />
       <Services />
+      <Packages />
     </div>
   );
 }
