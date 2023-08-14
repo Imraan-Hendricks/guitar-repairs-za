@@ -1,7 +1,8 @@
-import { Packages } from './Packages';
 import { Hero } from './Hero';
+import { Packages } from './Packages';
 import { Promo } from './Promo';
 import { Services } from './Services';
+import { Pricing } from './Pricing';
 
 export const metadata = {
   title: 'Guitar Repair ZA | Home',
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <Services />
       <Packages />
+      <Pricing />
     </div>
   );
 }
