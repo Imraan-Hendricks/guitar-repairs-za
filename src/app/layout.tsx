@@ -1,6 +1,7 @@
 import './globals.css';
 import { Font } from './Font';
 import { PropsWithChildren } from 'react';
+import { Providers } from './Providers';
 
 export const metadata = {
   authors: { name: 'Imraan-Hendricks', url: 'https://www.imraanhendricks.com' },
@@ -13,7 +14,9 @@ export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang='en'>
       <body>
-        <Font>{children}</Font>
+        <Providers>
+          <Font>{children}</Font>
+        </Providers>
       </body>
     </html>
   );

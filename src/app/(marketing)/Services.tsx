@@ -1,10 +1,11 @@
-import GuitarRestringImage from '../../../public/guitar-restring.jpg';
+import GuitarRestringImage from '../../../public/guitar-bridge.jpg';
+import GuitarRestringImage2 from '../../../public/black-and-white-acoustic.jpg';
 import Image from 'next/image';
 import { BsFillCheckCircleFill } from 'react-icons/bs';
 
 export function Services() {
   return (
-    <section className='bg-black text-white py-24 px-6 sm:px-8'>
+    <section className='bg-black text-white pb-12 pt-24 px-6 sm:px-8'>
       <div className='grid gap-16 max-w-[1700px] mx-auto'>
         <div className='grid gap-2'>
           <h2 className='text-center text-yellow-300 text-base sm:text-lg md:text-xl tracking-wider'>
@@ -22,8 +23,8 @@ export function Services() {
             potential today.
           </p>
         </div>
-        <div className='grid 2xl:grid-cols-2 gap-y-20 items-center'>
-          <ul className='grid md:grid-cols-2 gap-x-8 gap-y-16 md:mx-auto'>
+        <div className='grid 2xl:grid-cols-1 gap-y-24 items-center'>
+          <ul className='grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-8 md:mx-auto'>
             {[
               {
                 title: 'Comprehensive Guitar Cleaning',
@@ -66,36 +67,58 @@ export function Services() {
                 description: `Thorough cleaning for responsive controls and switches`,
               },
             ].map(({ title, description }) => (
-              <li key={title}>
+              <li
+                key={title}
+                className='border border-white/20 rounded py-8 px-4 sm:px-6 lg:px-12'>
                 <div className='flex flex-col gap-2'>
-                  <div className='flex gap-2 justify-center md:justify-start items-center'>
-                    <BsFillCheckCircleFill className='h-5 sm:h-6 w-auto text-yellow-300/70' />
-                    <h2 className='text-gray-200 text-sm sm:text-base font-medium w-max'>
-                      {title}
-                    </h2>
-                  </div>
-                  <p className='text-white/50 text-sm sm:text-base text-center md:text-start max-w-xs sm:max-w-sm md:max-w-none mx-auto md:mx-0'>
+                  <BsFillCheckCircleFill className='h-6 sm:h-7 w-auto text-yellow-300' />
+                  <h2 className='text-gray-200 text-sm sm:text-base font-medium text-center'>
+                    {title}
+                  </h2>
+                  <p className='text-white/50 text-sm sm:text-base text-center max-w-xs mx-auto'>
                     {description}
                   </p>
                 </div>
               </li>
             ))}
           </ul>
-          <div className='relative'>
-            <Image
-              className='absolute inset-0 object-cover w-full'
-              src={GuitarRestringImage}
-              alt='guitar-restring'
-            />
-            <div className='relative bg-gradient-to-l from-transparent via-transparent to-black'>
-              <div className='relative bg-gradient-to-t from-transparent via-transparent to-black/75'>
-                <div className='relative bg-gradient-to-r from-transparent via-transparent to-black/75'>
-                  <div className='relative bg-gradient-to-b from-transparent via-transparent to-black/75'>
-                    <Image
-                      className='invisible object-cover w-full'
-                      src={GuitarRestringImage}
-                      alt='guitar-restring'
-                    />
+          <div className='grid md:grid-cols-2 gap-24 md:gap-12 pt-12'>
+            <div className='relative'>
+              <Image
+                className='absolute inset-0 object-cover w-full'
+                src={GuitarRestringImage}
+                alt='guitar-restring'
+              />
+              <div className='relative bg-gradient-to-l from-transparent via-transparent to-black'>
+                <div className='relative bg-gradient-to-t from-transparent via-transparent to-black'>
+                  <div className='relative bg-gradient-to-r from-transparent via-transparent to-black'>
+                    <div className='relative bg-gradient-to-b from-transparent via-transparent to-black'>
+                      <Image
+                        className='invisible object-cover w-full'
+                        src={GuitarRestringImage}
+                        alt='guitar-restring'
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>{' '}
+            <div className='relative'>
+              <Image
+                className='absolute inset-0 object-cover w-full'
+                src={GuitarRestringImage2}
+                alt='guitar-restring'
+              />
+              <div className='relative bg-gradient-to-l from-transparent via-transparent to-black'>
+                <div className='relative bg-gradient-to-t from-transparent via-transparent to-black'>
+                  <div className='relative bg-gradient-to-r from-transparent via-transparent to-black'>
+                    <div className='relative bg-gradient-to-b from-transparent via-transparent to-black'>
+                      <Image
+                        className='invisible object-cover w-full'
+                        src={GuitarRestringImage2}
+                        alt='guitar-restring'
+                      />
+                    </div>
                   </div>
                 </div>
               </div>

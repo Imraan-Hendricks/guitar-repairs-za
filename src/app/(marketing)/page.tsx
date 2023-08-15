@@ -1,9 +1,12 @@
-import { Hero } from './Hero';
-import { Packages } from './Packages';
-import { Promo } from './Promo';
-import { Services } from './Services';
-import { Pricing } from './Pricing';
+import { ContactForm } from './ContactForm';
+import { ContactInfo } from './ContactInfo';
 import { ExclusiveDeal } from './ExclusiveDeal';
+import { Hero } from './Hero';
+import { Navbar } from './Navbar';
+import { Packages } from './Packages';
+import { Pricing } from './Pricing';
+import { ScrollAnchor } from './NavbarContext';
+import { Services } from './Services';
 
 export const metadata = {
   title: 'Guitar Repair ZA | Home',
@@ -12,12 +15,26 @@ export const metadata = {
 export default function Home() {
   return (
     <div>
-      <Promo />
-      <Hero />
-      <Services />
-      <Packages />
-      <Pricing />
-      <ExclusiveDeal />
+      <ScrollAnchor name='home'>
+        <Navbar />
+        <Hero />
+      </ScrollAnchor>
+      <ScrollAnchor name='services'>
+        <Services />
+      </ScrollAnchor>
+      <ScrollAnchor name='packages'>
+        <Packages />
+      </ScrollAnchor>
+      <ScrollAnchor name='pricing'>
+        <Pricing />
+        <ScrollAnchor name='exclusiveDeal'>
+          <ExclusiveDeal />
+        </ScrollAnchor>
+      </ScrollAnchor>
+      <ScrollAnchor name='contact'>
+        <ContactInfo />
+        <ContactForm />
+      </ScrollAnchor>
     </div>
   );
 }
