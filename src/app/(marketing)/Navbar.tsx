@@ -18,7 +18,7 @@ export function Navbar() {
               <div
                 className='group relative flex gap-0.5 items-center cursor-pointer'
                 onClick={() => scrollToTop()}>
-                <TbGuitarPickFilled className='h-12 w-auto text-black group-hover:text-yellow-300 transition-colors' />
+                <TbGuitarPickFilled className='h-12 w-auto text-black group-hover:text-yellow-300 group-active:text-yellow-400 transition-colors' />
                 <span className='text-xs font-semibold text-yellow-300 group-hover:text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-colors'>
                   GRZ
                 </span>
