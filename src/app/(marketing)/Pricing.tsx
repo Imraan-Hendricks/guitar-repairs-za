@@ -1,15 +1,11 @@
 import Image from 'next/image';
 import SunburstGuitarImage from '../../../public/sunburst-guitar.jpg';
 import { BsFillCheckCircleFill } from 'react-icons/bs';
-import clsx from 'clsx';
-
-// make responsive
-// When click get started make a special form model, or fixed full screen that will just get the email and maybe the start date, and maybe collection and delivery
-// change that promo bar into a reqular navbar
+import { clsx } from 'clsx';
 
 export function Pricing() {
   return (
-    <section className='bg-black pt-12'>
+    <section className='bg-black py-24'>
       <div className='relative'>
         <Image
           className='absolute inset-0 object-cover w-full h-full'
