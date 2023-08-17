@@ -1,17 +1,36 @@
 'use client';
 
 import { clsx } from 'clsx';
+import { MdClose } from 'react-icons/md';
 import { HiMenu } from 'react-icons/hi';
 import { scrollToRef, scrollToTop } from '@/utils/scroll-utils';
 import { TbGuitarPickFilled } from 'react-icons/tb';
+import { useEffect, useState } from 'react';
 import { useNavbarContext } from './NavbarContext';
+import { useScrollObserver } from '@/hooks/useScrollObserver';
 
 export function Navbar() {
-  const { observer, isActive } = useNavbarContext();
+  const { scrollDirection, scrollPosition } = useScrollObserver();
+  const [hideNabvar, setHideNavbar] = useState(false);
+  const { observer, isActive, isOpen, setIsOpen } = useNavbarContext();
+
+  function toggleMenu() {
+    setIsOpen(isOpen => !isOpen);
+  }
+
+  useEffect(() => {
+    if (scrollPosition > 62 && scrollDirection === 'down' && !isOpen)
+      setHideNavbar(true);
+    else setHideNavbar(false);
+  }, [scrollPosition, scrollDirection, isOpen]);
 
   return (
-    <div className='h-[62px]'>
-      <div className='fixed top-0 left-0 w-full z-50 bg-white px-4 py-1.5 border-b-2 border-yellow-300 h-[62px]'>
+    <div className='bg-black h-[62px]'>
+      <div
+        className={clsx(
+          hideNabvar ? '-top-[62px] opacity-0' : 'top-0 opacity-100',
+          'fixed left-0 w-full z-50 bg-white px-4 py-1.5 border-b-2 border-yellow-300 h-[62px] transition-all duration-700',
+        )}>
         <div className='w-full flex items-center justify-between container mx-auto'>
           <div className='flex justify-between'>
             <div className='flex gap-4 items-center relative'>
@@ -78,8 +97,14 @@ export function Navbar() {
               Sign In
             </button>
           </div>
-          <div className='lg:hidden group rounded p-1.5 hover:bg-yellow-300 hover:border-yellow-300 active:bg-transparent active:border-transparent cursor-pointer transition-colors'>
-            <HiMenu className='h-6 sm:h-7 w-auto text-yellow-300 group-hover:text-black group-active:text-yellow-300' />
+          <div
+            onClick={toggleMenu}
+            className='lg:hidden group rounded p-1.5 hover:bg-yellow-300 hover:border-yellow-300 active:bg-transparent active:border-transparent cursor-pointer transition-colors'>
+            {isOpen ? (
+              <MdClose className='h-6 sm:h-7 w-auto text-yellow-300 group-hover:text-black group-active:text-yellow-300' />
+            ) : (
+              <HiMenu className='h-6 sm:h-7 w-auto text-yellow-300 group-hover:text-black group-active:text-yellow-300' />
+            )}
           </div>
         </div>
       </div>

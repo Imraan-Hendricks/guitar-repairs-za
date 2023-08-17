@@ -2,8 +2,10 @@
 
 import {
   createContext,
+  Dispatch,
   PropsWithChildren,
   RefObject,
+  SetStateAction,
   useCallback,
   useContext,
   useEffect,
@@ -39,6 +41,8 @@ interface ContextProps {
   setIsVisible: (isVisible: boolean, name: ObserverName) => void;
   handleIsActive(name: ObserverName): void;
   isActive: string;
+  isOpen: boolean;
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
 }
 
 const ScrollRefsContext = createContext<ContextProps | null>(null);
@@ -56,6 +60,8 @@ interface ScrollAnchor {
 }
 
 export function NavbarProvider({ children }: PropsWithChildren) {
+  const [isOpen, setIsOpen] = useState(false);
+
   const homeRef = useRef<HTMLDivElement>(null);
   const servicesRef = useRef<HTMLDivElement>(null);
   const packagesRef = useRef<HTMLDivElement>(null);
@@ -129,7 +135,14 @@ export function NavbarProvider({ children }: PropsWithChildren) {
 
   return (
     <ScrollRefsContext.Provider
-      value={{ observer, setIsVisible, handleIsActive, isActive }}>
+      value={{
+        observer,
+        setIsVisible,
+        handleIsActive,
+        isActive,
+        isOpen,
+        setIsOpen,
+      }}>
       {children}
     </ScrollRefsContext.Provider>
   );

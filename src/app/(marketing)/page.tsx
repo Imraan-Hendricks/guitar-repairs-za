@@ -2,6 +2,7 @@ import { ContactForm } from './ContactForm';
 import { ContactInfo } from './ContactInfo';
 import { ExclusiveDeal } from './ExclusiveDeal';
 import { Hero } from './Hero';
+import { MobileMenu } from './MobileMenu';
 import { Navbar } from './Navbar';
 import { Packages } from './Packages';
 import { Pricing } from './Pricing';
@@ -18,6 +19,7 @@ export default function Home() {
     <div>
       <ScrollAnchor name='home'>
         <Navbar />
+        <MobileMenu />
         <Hero />
       </ScrollAnchor>
       <ScrollToTopButton />
