@@ -19,7 +19,7 @@ export function ScrollToTopButton() {
       )}>
       <div
         onClick={() => scrollToTop()}
-        className='bg-white hover:bg-yellow-300 active:bg-yellow-400 rounded-xl cursor-pointer'>
+        className='bg-white hover:bg-yellow-300 active:bg-yellow-400 transition-colors rounded-xl cursor-pointer'>
         <HiChevronUp className='h-10 md:h-11 lg:h-12 w-auto' />
       </div>
     </aside>

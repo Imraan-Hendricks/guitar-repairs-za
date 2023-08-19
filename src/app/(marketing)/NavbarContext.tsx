@@ -25,6 +25,7 @@ interface Observer {
   packages: ObserverData;
   pricing: ObserverData;
   exclusiveDeal: ObserverData;
+  testimonials: ObserverData;
   contact: ObserverData;
 }
 
@@ -34,6 +35,7 @@ type ObserverName =
   | 'packages'
   | 'pricing'
   | 'exclusiveDeal'
+  | 'testimonials'
   | 'contact';
 
 interface ContextProps {
@@ -67,6 +69,7 @@ export function NavbarProvider({ children }: PropsWithChildren) {
   const packagesRef = useRef<HTMLDivElement>(null);
   const pricingRef = useRef<HTMLDivElement>(null);
   const exclusiveDealRef = useRef<HTMLDivElement>(null);
+  const testimonialsRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
 
   const [homeIsVisbile, setHomeIsVisible] = useState(false);
@@ -74,6 +77,7 @@ export function NavbarProvider({ children }: PropsWithChildren) {
   const [packagesIsVisible, setPackagesIsVisible] = useState(false);
   const [pricingIsVisibile, setPricingIsVisible] = useState(false);
   const [exclusiveDealIsVisibile, setExclusiveDealIsVisible] = useState(false);
+  const [testimonialsIsVisible, setTestimonialsIsVisible] = useState(false);
   const [contactIsVisible, setContactIsVisible] = useState(false);
 
   const setIsVisible = useCallback(
@@ -83,6 +87,7 @@ export function NavbarProvider({ children }: PropsWithChildren) {
       if (name === 'packages') setPackagesIsVisible(isVisible);
       if (name === 'pricing') setPricingIsVisible(isVisible);
       if (name === 'exclusiveDeal') setExclusiveDealIsVisible(isVisible);
+      if (name === 'testimonials') setTestimonialsIsVisible(isVisible);
       if (name === 'contact') setContactIsVisible(isVisible);
     },
     [
@@ -91,6 +96,7 @@ export function NavbarProvider({ children }: PropsWithChildren) {
       setPackagesIsVisible,
       setPricingIsVisible,
       setExclusiveDealIsVisible,
+      setTestimonialsIsVisible,
       setContactIsVisible,
     ],
   );
@@ -100,6 +106,8 @@ export function NavbarProvider({ children }: PropsWithChildren) {
   const handleIsActive = useCallback(
     (name: ObserverName | 'home') => {
       if (contactIsVisible && name === 'contact') return setIsActive('contact');
+      if (testimonialsIsVisible && name === 'testimonials')
+        return setIsActive('testimonials');
       if (exclusiveDealIsVisibile && name === 'exclusiveDeal')
         return setIsActive('exclusiveDeal');
       if (pricingIsVisibile && name === 'pricing')
@@ -117,6 +125,7 @@ export function NavbarProvider({ children }: PropsWithChildren) {
       packagesIsVisible,
       pricingIsVisibile,
       exclusiveDealIsVisibile,
+      testimonialsIsVisible,
       contactIsVisible,
     ],
   );
@@ -130,6 +139,7 @@ export function NavbarProvider({ children }: PropsWithChildren) {
       ref: exclusiveDealRef,
       isVisible: exclusiveDealIsVisibile,
     },
+    testimonials: { ref: testimonialsRef, isVisible: testimonialsIsVisible },
     contact: { ref: contactRef, isVisible: contactIsVisible },
   };
 

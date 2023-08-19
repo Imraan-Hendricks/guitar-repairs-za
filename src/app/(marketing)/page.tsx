@@ -9,6 +9,7 @@ import { Pricing } from './Pricing';
 import { ScrollAnchor } from './NavbarContext';
 import { Services } from './Services';
 import { ScrollToTopButton } from '../../components/ScrollToTopButton';
+import { Testimonials } from './Testimonials';
 
 export const metadata = {
   title: 'Guitar Repair ZA | Home',
@@ -34,6 +35,9 @@ export default function Home() {
         <ScrollAnchor name='exclusiveDeal'>
           <ExclusiveDeal />
         </ScrollAnchor>
+      </ScrollAnchor>
+      <ScrollAnchor name='testimonials'>
+        <Testimonials />
       </ScrollAnchor>
       <ScrollAnchor name='contact'>
         <ContactInfo />

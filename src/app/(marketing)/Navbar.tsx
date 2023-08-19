@@ -25,7 +25,7 @@ export function Navbar() {
   }, [scrollPosition, scrollDirection, isOpen]);
 
   return (
-    <div className='bg-black h-[62px]'>
+    <div className='h-[62px]'>
       <div
         className={clsx(
           hideNabvar ? '-top-[62px] opacity-0' : 'top-0 opacity-100',
@@ -42,7 +42,7 @@ export function Navbar() {
                   GRZ
                 </span>
               </div>
-              <nav className='hidden lg:flex'>
+              <nav className='hidden xl:flex'>
                 <ul className='flex gap-4'>
                   {[
                     {
@@ -64,6 +64,11 @@ export function Navbar() {
                       name: 'Price',
                       active: isActive === 'pricing',
                       onClick: () => scrollToRef(observer.pricing.ref),
+                    },
+                    {
+                      name: 'Testimonials',
+                      active: isActive === 'testimonials',
+                      onClick: () => scrollToRef(observer.testimonials.ref),
                     },
                     {
                       name: 'Contact',
@@ -99,7 +104,7 @@ export function Navbar() {
           </div>
           <div
             onClick={toggleMenu}
-            className='lg:hidden group rounded p-1.5 hover:bg-yellow-300 hover:border-yellow-300 active:bg-transparent active:border-transparent cursor-pointer transition-colors'>
+            className='xl:hidden group rounded p-1.5 hover:bg-yellow-300 hover:border-yellow-300 active:bg-transparent active:border-transparent cursor-pointer transition-colors'>
             {isOpen ? (
               <MdClose className='h-6 sm:h-7 w-auto text-yellow-300 group-hover:text-black group-active:text-yellow-300' />
             ) : (

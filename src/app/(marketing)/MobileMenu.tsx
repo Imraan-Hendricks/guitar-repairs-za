@@ -73,6 +73,14 @@ export function MobileMenu() {
                 },
               },
               {
+                name: 'Testimonials',
+                active: isActive === 'testimonials',
+                onClick: () => {
+                  scrollToRef(observer.testimonials.ref);
+                  closeMenu();
+                },
+              },
+              {
                 name: 'Contact',
                 active: isActive === 'contact',
                 onClick: () => {

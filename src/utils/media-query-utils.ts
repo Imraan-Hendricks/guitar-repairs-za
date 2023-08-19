@@ -4,6 +4,7 @@ type MediaQueryCallback = (matches: boolean) => void;
 export function handleMediaQuery(
   breakpoint: Breakpoint,
   callback: MediaQueryCallback,
+  runOnMount?: boolean,
 ) {
   const width =
     breakpoint === 'xs'
@@ -25,6 +26,8 @@ export function handleMediaQuery(
   function handleMediaChange(event: MediaQueryListEvent) {
     callback(event.matches);
   }
+
+  if (runOnMount) callback(mediaQuery.matches);
 
   mediaQuery.addEventListener('change', handleMediaChange);
 
