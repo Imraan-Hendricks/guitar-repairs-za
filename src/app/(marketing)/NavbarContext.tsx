@@ -21,6 +21,7 @@ interface ObserverData {
 
 interface Observer {
   home: ObserverData;
+  about: ObserverData;
   services: ObserverData;
   packages: ObserverData;
   pricing: ObserverData;
@@ -31,6 +32,7 @@ interface Observer {
 
 type ObserverName =
   | 'home'
+  | 'about'
   | 'services'
   | 'packages'
   | 'pricing'
@@ -65,6 +67,7 @@ export function NavbarProvider({ children }: PropsWithChildren) {
   const [isOpen, setIsOpen] = useState(false);
 
   const homeRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
   const servicesRef = useRef<HTMLDivElement>(null);
   const packagesRef = useRef<HTMLDivElement>(null);
   const pricingRef = useRef<HTMLDivElement>(null);
@@ -73,6 +76,7 @@ export function NavbarProvider({ children }: PropsWithChildren) {
   const contactRef = useRef<HTMLDivElement>(null);
 
   const [homeIsVisbile, setHomeIsVisible] = useState(false);
+  const [aboutIsVisbile, setAboutIsVisible] = useState(false);
   const [servicesIsVisibile, setServicesIsVisible] = useState(false);
   const [packagesIsVisible, setPackagesIsVisible] = useState(false);
   const [pricingIsVisibile, setPricingIsVisible] = useState(false);
@@ -83,6 +87,7 @@ export function NavbarProvider({ children }: PropsWithChildren) {
   const setIsVisible = useCallback(
     (isVisible: boolean, name: ObserverName) => {
       if (name === 'home') setHomeIsVisible(isVisible);
+      if (name === 'about') setAboutIsVisible(isVisible);
       if (name === 'services') setServicesIsVisible(isVisible);
       if (name === 'packages') setPackagesIsVisible(isVisible);
       if (name === 'pricing') setPricingIsVisible(isVisible);
@@ -92,6 +97,7 @@ export function NavbarProvider({ children }: PropsWithChildren) {
     },
     [
       setHomeIsVisible,
+      setAboutIsVisible,
       setServicesIsVisible,
       setPackagesIsVisible,
       setPricingIsVisible,
@@ -116,11 +122,13 @@ export function NavbarProvider({ children }: PropsWithChildren) {
         return setIsActive('packages');
       if (servicesIsVisibile && name === 'services')
         return setIsActive('services');
+      if (aboutIsVisbile && name === 'about') return setIsActive('about');
       if (homeIsVisbile && name === 'home') return setIsActive('home');
       return setIsActive('');
     },
     [
       homeIsVisbile,
+      aboutIsVisbile,
       servicesIsVisibile,
       packagesIsVisible,
       pricingIsVisibile,
@@ -132,6 +140,7 @@ export function NavbarProvider({ children }: PropsWithChildren) {
 
   const observer: Observer = {
     home: { ref: homeRef, isVisible: homeIsVisbile },
+    about: { ref: aboutRef, isVisible: aboutIsVisbile },
     services: { ref: servicesRef, isVisible: servicesIsVisibile },
     packages: { ref: packagesRef, isVisible: packagesIsVisible },
     pricing: { ref: pricingRef, isVisible: pricingIsVisibile },

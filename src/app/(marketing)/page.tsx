@@ -1,3 +1,4 @@
+import { About } from './About';
 import { ContactForm } from './ContactForm';
 import { ContactInfo } from './ContactInfo';
 import { ExclusiveDeal } from './ExclusiveDeal';
@@ -25,6 +26,10 @@ export default function Home() {
         <Hero />
       </ScrollAnchor>
       <ScrollToTopButton />
+
+      <ScrollAnchor name='about'>
+        <About />
+      </ScrollAnchor>
 
       <ScrollAnchor name='services'>
         <InViewAnimation>

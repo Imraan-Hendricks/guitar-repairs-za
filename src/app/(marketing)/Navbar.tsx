@@ -51,6 +51,11 @@ export function Navbar() {
                       onClick: () => scrollToRef(observer.home.ref),
                     },
                     {
+                      name: 'About',
+                      active: isActive === 'about',
+                      onClick: () => scrollToRef(observer.about.ref),
+                    },
+                    {
                       name: 'Services',
                       active: isActive === 'services',
                       onClick: () => scrollToRef(observer.services.ref),
