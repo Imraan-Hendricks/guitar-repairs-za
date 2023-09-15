@@ -14,7 +14,7 @@ export function Hero() {
         <div className='grid gap-6 sm:gap-8 px-4 h-[50vh] content-center'>
           <div className='grid gap-2'>
             <p className='text-sm sm:text-base text-white text-yellow-300/60 text-center xl:text-start'>
-              - by Joshua Houston
+              - by Dylan Marshall
             </p>
             <h1 className='text-4xl sm:text-5xl xl:text-6xl font-bold text-white text-center xl:text-start'>
               Guitar <span className='text-yellow-300/90'>Repair</span> ZA

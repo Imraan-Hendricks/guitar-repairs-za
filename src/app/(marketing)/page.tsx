@@ -2,6 +2,7 @@ import { ContactForm } from './ContactForm';
 import { ContactInfo } from './ContactInfo';
 import { ExclusiveDeal } from './ExclusiveDeal';
 import { Hero } from './Hero';
+import { InViewAnimation } from '@/components/InViewAnimation';
 import { MobileMenu } from './MobileMenu';
 import { Navbar } from './Navbar';
 import { Packages } from './Packages';
@@ -24,24 +25,43 @@ export default function Home() {
         <Hero />
       </ScrollAnchor>
       <ScrollToTopButton />
+
       <ScrollAnchor name='services'>
-        <Services />
+        <InViewAnimation>
+          <Services />
+        </InViewAnimation>
       </ScrollAnchor>
+
       <ScrollAnchor name='packages'>
-        <Packages />
+        <InViewAnimation>
+          <Packages />
+        </InViewAnimation>
       </ScrollAnchor>
+
       <ScrollAnchor name='pricing'>
-        <Pricing />
+        <InViewAnimation>
+          <Pricing />
+        </InViewAnimation>
         <ScrollAnchor name='exclusiveDeal'>
-          <ExclusiveDeal />
+          <InViewAnimation>
+            <ExclusiveDeal />
+          </InViewAnimation>
         </ScrollAnchor>
       </ScrollAnchor>
+
       <ScrollAnchor name='testimonials'>
-        <Testimonials />
+        <InViewAnimation>
+          <Testimonials />
+        </InViewAnimation>
       </ScrollAnchor>
+
       <ScrollAnchor name='contact'>
-        <ContactInfo />
-        <ContactForm />
+        <InViewAnimation>
+          <ContactInfo />
+        </InViewAnimation>
+        <InViewAnimation>
+          <ContactForm />
+        </InViewAnimation>
       </ScrollAnchor>
     </div>
   );

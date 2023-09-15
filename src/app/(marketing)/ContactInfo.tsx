@@ -7,7 +7,7 @@ export function ContactInfo() {
   return (
     <section className='bg-black'>
       <div className='grid lg:grid-cols-2'>
-        <div className='relative'>
+        <div className='relative hidden lg:block'>
           <Image
             className='absolute inset-0 object-cover h-full w-full'
             src={ElectricGuitarsImage}

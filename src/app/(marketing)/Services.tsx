@@ -72,7 +72,7 @@ export function Services() {
                 className='border border-white/20 rounded py-8 px-4 sm:px-6 lg:px-12'>
                 <div className='flex flex-col gap-2'>
                   <BsFillCheckCircleFill className='h-6 sm:h-7 w-auto text-yellow-300' />
-                  <h2 className='text-gray-200 text-sm sm:text-base font-medium text-center'>
+                  <h2 className='text-white/90 text-sm sm:text-base font-medium text-center'>
                     {title}
                   </h2>
                   <p className='text-white/50 text-sm sm:text-base text-center max-w-xs mx-auto'>
