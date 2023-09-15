@@ -17,7 +17,7 @@ export function Hero() {
               - by Dylan Marshall
             </p>
             <h1 className='text-4xl sm:text-5xl xl:text-6xl font-bold text-white text-center xl:text-start'>
-              Guitar <span className='text-yellow-300/90'>Repair</span> ZA
+              Guitar <span className='text-yellow-300/90'>Repairs</span> ZA
             </h1>
           </div>
           <p className='text-lg sm:text-xl lg:text-lg xl:text-xl font-normal tracking-wide text-white/50 max-w-lg text-center xl:text-start'>
