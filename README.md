@@ -6,7 +6,7 @@ This project is a website built with Next.js, Tailwind CSS, and Framer Motion to
 
 ### Description:
 
-"Unlock the True Sound of Your Guitar" is a web design project that offers expert guitar repair and setup services. The website aims to provide a captivating user experience, presenting the client's services in a clear and appealing manner. By combining Next.js for server-side rendering, Tailwind CSS for rapid and responsive UI development, and Framer Motion for smooth animations, the website delivers a modern and visually engaging interface.
+"Guitar Repairs ZA" is a web design project that offers expert guitar repair and setup services. The website aims to provide a captivating user experience, presenting the client's services in a clear and appealing manner. By combining Next.js for server-side rendering, Tailwind CSS for rapid and responsive UI development, and Framer Motion for smooth animations, the website delivers a modern and visually engaging interface.
 
 ### Key Features:
 

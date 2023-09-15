@@ -3,8 +3,6 @@ import FretboardImage from '../../../public/fretboard.jpg';
 import { FaClipboardCheck, FaTruck } from 'react-icons/fa';
 import { IoIosSpeedometer } from 'react-icons/io';
 
-// FINISH CONTENT OF THREE COLOUMN GRID LAYOUT
-
 export function About() {
   return (
     <section className='pt-40 pb-24'>
@@ -18,7 +16,7 @@ export function About() {
               Driven by Music, Defined by Excellence
             </h1>
             <p className='text-center text-white/60 text-sm sm:text-base md:text-lg tracking-wide max-w-4xl lg:max-w-5xl xl:max-w-5xl mx-auto mt-2'>
-              At Guitar Repair ZA, we fuse passion and expertise to create an
+              At Guitar Repairs ZA, we fuse passion and expertise to create an
               experience that transforms instruments and elevates musical
               performance. With each string we restring and every setup we
               perfect, our dedication to delivering exceptional service
