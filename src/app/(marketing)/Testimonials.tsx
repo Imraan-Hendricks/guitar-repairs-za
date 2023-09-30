@@ -186,7 +186,10 @@ export function Testimonials() {
           )}
         </ul>
         <div className='flex justify-center items-center gap-4'>
-          <button onClick={previous} disabled={currentPage === 1}>
+          <button
+            aria-label='Previous Page'
+            onClick={previous}
+            disabled={currentPage === 1}>
             <HiChevronLeft
               className={clsx(
                 'w-7 h-auto transition-colors',
@@ -210,7 +213,10 @@ export function Testimonials() {
               {index + 1}
             </button>
           ))}
-          <button onClick={next} disabled={currentPage === totalPages}>
+          <button
+            aria-label='Next Page'
+            onClick={next}
+            disabled={currentPage === totalPages}>
             <HiChevronRight
               className={clsx(
                 'w-7 h-auto transition-colors',

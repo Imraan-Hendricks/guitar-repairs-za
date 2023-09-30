@@ -82,9 +82,9 @@ export function Pricing() {
                         Best Seller
                       </span>
                       <div>
-                        <h3 className='text-yellow-300 text-base sm:text-lg 2xl:text-xl tracking-wider'>
+                        <h1 className='text-yellow-300 text-base sm:text-lg 2xl:text-xl tracking-wider'>
                           {name}
-                        </h3>
+                        </h1>
                         <span className='text-4xl sm:text-5xl md:text-5xl 2xl:text-6xl font-bold tracking-wide text-white'>
                           {price}
                           <span className='text-xs sm:text-sm text-white/50'>
