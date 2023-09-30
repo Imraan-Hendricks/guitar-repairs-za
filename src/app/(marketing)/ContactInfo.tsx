@@ -1,4 +1,4 @@
-import ElectricGuitarsImage from '../../../public/electric-guitars.jpg';
+import ElectricGuitarsImage from '../../../public/electric-guitars-1920.jpg';
 import Image from 'next/image';
 import { FaGlobe, FaMapMarked, FaPhone } from 'react-icons/fa';
 import { HiMail } from 'react-icons/hi';
@@ -12,6 +12,7 @@ export function ContactInfo() {
             className='absolute inset-0 object-cover h-full w-full'
             src={ElectricGuitarsImage}
             alt='electric-guitars'
+            placeholder='blur'
           />
           <div className='relative bg-gradient-to-t from-black/0 via-black/0 to-black'>
             <div className='relative bg-gradient-to-b from-black/0 via-black/0 to-black'>
@@ -41,7 +42,7 @@ export function ContactInfo() {
                 { name: 'Contact', value: '079 173 4474', Icon: FaPhone },
                 {
                   name: 'Location',
-                  value: 'Based in Vierlanden, Durbanville',
+                  value: 'Based in Rosebank, Cape Town',
                   Icon: FaMapMarked,
                 },
                 {

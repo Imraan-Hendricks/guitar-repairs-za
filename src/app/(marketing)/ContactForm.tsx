@@ -1,4 +1,4 @@
-import AcousticGuitarsImage from '../../../public/acoustic-guitars.jpg';
+import AcousticGuitarsImage from '../../../public/acoustic-guitars-1920.jpg';
 import Image from 'next/image';
 import { TextField } from '@/components/TextField';
 import { TextArea } from '@/components/TextArea';
@@ -10,6 +10,7 @@ export function ContactForm() {
         className='absolute inset-0 object-cover h-full w-full'
         src={AcousticGuitarsImage}
         alt='acoustic-guitars'
+        placeholder='blur'
       />
       <div className='relative bg-gradient-to-t from-black/0 via-black/40 to-black'>
         <div className='relative bg-gradient-to-b from-black/0 via-black/60 sm:via-black/40 to-black'>

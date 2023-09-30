@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import FretboardImage from '../../../public/fretboard.jpg';
+import FretboardImage from '../../../public/fretboard-2560.jpg';
 import { FaClipboardCheck, FaTruck } from 'react-icons/fa';
 import { IoIosSpeedometer } from 'react-icons/io';
 
@@ -67,6 +67,7 @@ export function About() {
               className='aspect-[20/5] absolute inset-0 object-cover object-center w-full'
               src={FretboardImage}
               alt='fretboard'
+              placeholder='blur'
             />
             <div className='relative bg-gradient-to-l from-transparent via-transparent to-black'>
               <div className='relative bg-gradient-to-t from-transparent via-transparent to-black'>
@@ -76,6 +77,7 @@ export function About() {
                       className='aspect-[20/5] w-full invisible'
                       src={FretboardImage}
                       alt='fretboard'
+                      placeholder='blur'
                     />
                   </div>
                 </div>

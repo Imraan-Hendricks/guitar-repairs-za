@@ -1,4 +1,4 @@
-import GuitarUprightImage from '../../../public/guitar-upright.jpg';
+import GuitarUprightImage from '../../../public/guitar-upright-512.jpg';
 import Image from 'next/image';
 import { BsFillCheckCircleFill } from 'react-icons/bs';
 
@@ -45,6 +45,7 @@ export function Packages() {
               className='absolute inset-0 object-cover h-[800px] w-auto'
               src={GuitarUprightImage}
               alt='guitar-upright'
+              placeholder='blur'
             />
             <div className='relative h-[800px] w-full bg-gradient-to-t from-transparent via-black/30 to-black'>
               <Image
@@ -59,6 +60,7 @@ export function Packages() {
               className='absolute inset-0 object-cover h-[800px] w-auto'
               src={GuitarUprightImage}
               alt='guitar-upright'
+              placeholder='blur'
             />
             <div className='relative h-[800px] w-full bg-gradient-to-t from-transparent via-black/30 to-black'>
               <Image

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import SunburstGuitarImage from '../../../public/sunburst-guitar.jpg';
+import SunburstGuitarImage from '../../../public/sunburst-guitar-1920.jpg';
 import { BsFillCheckCircleFill } from 'react-icons/bs';
 import { clsx } from 'clsx';
 
@@ -11,6 +11,7 @@ export function Pricing() {
           className='absolute inset-0 object-cover w-full h-full'
           src={SunburstGuitarImage}
           alt='sunburst-guitar'
+          placeholder='blur'
         />
         <div>
           <div className='relative bg-gradient-to-b from-black/0 via-black/60 to-black'>

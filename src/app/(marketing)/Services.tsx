@@ -1,5 +1,5 @@
-import GuitarRestringImage from '../../../public/guitar-bridge.jpg';
-import GuitarRestringImage2 from '../../../public/black-and-white-acoustic.jpg';
+import GuitarRestringImage from '../../../public/guitar-bridge-960.jpg';
+import GuitarRestringImage2 from '../../../public/black-and-white-acoustic-960.jpg';
 import Image from 'next/image';
 import { BsFillCheckCircleFill } from 'react-icons/bs';
 
@@ -87,7 +87,8 @@ export function Services() {
               <Image
                 className='absolute inset-0 object-cover w-full'
                 src={GuitarRestringImage}
-                alt='guitar-restring'
+                alt='guitar-bridge'
+                placeholder='blur'
               />
               <div className='relative bg-gradient-to-l from-transparent via-transparent to-black'>
                 <div className='relative bg-gradient-to-t from-transparent via-transparent to-black'>
@@ -96,7 +97,8 @@ export function Services() {
                       <Image
                         className='invisible object-cover w-full'
                         src={GuitarRestringImage}
-                        alt='guitar-restring'
+                        alt='guitar-bridge'
+                        placeholder='blur'
                       />
                     </div>
                   </div>
@@ -107,7 +109,8 @@ export function Services() {
               <Image
                 className='absolute inset-0 object-cover w-full'
                 src={GuitarRestringImage2}
-                alt='guitar-restring'
+                alt='acoustic-guitar'
+                placeholder='blur'
               />
               <div className='relative bg-gradient-to-l from-transparent via-transparent to-black'>
                 <div className='relative bg-gradient-to-t from-transparent via-transparent to-black'>
@@ -116,7 +119,8 @@ export function Services() {
                       <Image
                         className='invisible object-cover w-full'
                         src={GuitarRestringImage2}
-                        alt='guitar-restring'
+                        alt='acoustic-guitar'
+                        placeholder='blur'
                       />
                     </div>
                   </div>

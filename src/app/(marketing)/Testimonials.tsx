@@ -1,14 +1,14 @@
 'use client';
 
 import Image from 'next/image';
-import TestimonialImage1 from '../../../public/testimonial-1.jpg';
-import TestimonialImage2 from '../../../public/testimonial-2.jpg';
-import TestimonialImage3 from '../../../public/testimonial-3.jpg';
-import TestimonialImage4 from '../../../public/testimonial-4.jpg';
-import TestimonialImage5 from '../../../public/testimonial-5.jpg';
-import TestimonialImage6 from '../../../public/testimonial-6.jpg';
-import TestimonialImage7 from '../../../public/testimonial-7.jpg';
-import TestimonialImage8 from '../../../public/testimonial-8.jpg';
+import TestimonialImage1 from '../../../public/testimonial-1-64.jpg';
+import TestimonialImage2 from '../../../public/testimonial-2-64.jpg';
+import TestimonialImage3 from '../../../public/testimonial-3-64.jpg';
+import TestimonialImage4 from '../../../public/testimonial-4-64.jpg';
+import TestimonialImage5 from '../../../public/testimonial-5-64.jpg';
+import TestimonialImage6 from '../../../public/testimonial-6-64.jpg';
+import TestimonialImage7 from '../../../public/testimonial-7-64.jpg';
+import TestimonialImage8 from '../../../public/testimonial-8-64.jpg';
 import { clsx } from 'clsx';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import { useState } from 'react';
@@ -170,7 +170,7 @@ export function Testimonials() {
                 </div>
                 <div className='flex gap-4 items-center'>
                   <div className='w-12 sm:w-14 h-auto rounded-full overflow-hidden border-2 border-yellow-300/75'>
-                    <Image src={src} alt={alt} />
+                    <Image src={src} alt={alt} placeholder='blur' />
                   </div>
                   <div className='grid gap-1'>
                     <h2 className='text-sm sm:text-base text-white font-semibold tracking-wide'>

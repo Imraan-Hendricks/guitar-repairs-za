@@ -1,6 +1,6 @@
 'use client';
 
-import GuitarAndAmpImage from '../../../public/guitar-player.jpg';
+import GuitarPlayer from '../../../public/guitar-player-1280.jpg';
 import Image from 'next/image';
 import { scrollToRef } from '@/utils/scroll-utils';
 import { useNavbarContext } from './NavbarContext';
@@ -40,15 +40,17 @@ export function Hero() {
         <div className='relative xl:w-[50vw] overflow-hidden border-t xl:border-t-0 border-yellow-300'>
           <Image
             className='absolute inset-0 object-cover h-[50vh] xl:h-screen'
-            src={GuitarAndAmpImage}
+            src={GuitarPlayer}
             alt='guitar-and-amp'
+            placeholder='blur'
           />
           <div className='relative bg-gradient-to-b from-black/0 via-black/0 to-black'>
             <div className='relative bg-gradient-to-r from-black/0 via-black/0 to-black'>
               <Image
                 className='object-cover h-[50vh] xl:h-screen invisible'
-                src={GuitarAndAmpImage}
+                src={GuitarPlayer}
                 alt='guitar-and-amp'
+                placeholder='blur'
               />
             </div>
           </div>
