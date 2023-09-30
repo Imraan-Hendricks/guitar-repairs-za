@@ -49,9 +49,9 @@ export function About() {
                     <Icon className='h-9 sm:h-10 md:h-12 lg:h-10 xl:h-12 w-auto text-yellow-300/75' />
                   </div>
                   <div className='grid gap-2'>
-                    <h3 className='text-white/90 font-medium sm:text-lg text-center lg:text-start'>
+                    <h1 className='text-white/90 font-medium sm:text-lg text-center lg:text-start'>
                       {name}
-                    </h3>
+                    </h1>
                     <p className='text-white/60 text-sm sm:text-base text-center lg:text-start max-w-md'>
                       {description}
                     </p>

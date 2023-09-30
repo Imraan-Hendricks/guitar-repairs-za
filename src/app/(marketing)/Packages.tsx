@@ -108,7 +108,7 @@ function Package({ name, overview, features }: PackageProps) {
     <div className='grid gap-8'>
       <div className='grid gap-8'>
         <div className='grid gap-1'>
-          <h3 className='text-white text-lg sm:text-xl font-medium'>{name}</h3>
+          <h1 className='text-white text-lg sm:text-xl font-medium'>{name}</h1>
           <p className='text-white/60 text-sm sm:text-base'>{overview}</p>
         </div>
         <hr className='border-white/10' />
@@ -119,9 +119,9 @@ function Package({ name, overview, features }: PackageProps) {
             <div className='flex flex-col gap-2'>
               <div className='flex gap-2'>
                 <BsFillCheckCircleFill className='h-5 sm:h-6 w-auto text-yellow-300/70' />
-                <h4 className='text-gray-200 text-sm sm:text-base font-medium w-max'>
+                <h1 className='text-gray-200 text-sm sm:text-base font-medium w-max'>
                   {title}
-                </h4>
+                </h1>
               </div>
               <p className='text-white/50 text-sm sm:text-base'>
                 {description}
